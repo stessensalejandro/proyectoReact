@@ -1,0 +1,12 @@
+import React from 'react'
+
+
+class primerComponente extends Component {
+  render() {
+    return (
+
+    )
+  }
+}
+
+export default primerComponente;
