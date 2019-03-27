@@ -5,6 +5,8 @@ import Button from './Button';
 import MiSelect from './MiSelect';
 import Form from './Form';
 import Item from './Item';
+import Reloj from './Reloj';
+
 class App extends Component {
   constructor(props) {
       super(props);
@@ -77,6 +79,9 @@ class App extends Component {
                    </div>
                    <div class="selectMes">
                    <MiSelect />
+                   </div>
+                   <div>
+                   <Reloj />
                    </div>
 
       </div>
