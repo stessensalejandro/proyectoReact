@@ -1,1 +1,16 @@
 
+
+#botonEliminar
+{
+background-image:url(./botonEliminar.jpg);
+ font-weight:bold;
+ color:white;
+ background:#638cb5;
+ border:0px;
+
+}
+#botonEliminar:hover
+{
+ width: 25px;
+ height: 25px;
+}

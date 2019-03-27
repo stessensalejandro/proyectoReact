@@ -12,6 +12,7 @@ class Form extends React.Component{
       sobre:"",
       terminos:"",
       guardar:"",
+      borrarOp:"",
       lista:[]}
   }
 onChange(e)
@@ -37,6 +38,10 @@ guardar(e)
   const nameLanguage=document.getElementById("language")
   const generoRadio=document.getElementById("genero")
   const sobreTextArea=document.getElementById("sobre")
+  console.log(document.getElementById("terminos").value)
+
+if (document.getElementById("terminos").value=="true")
+{
   let nuevo=
   {
     id:new Date().getTime(),
@@ -44,6 +49,7 @@ guardar(e)
     language:nameLanguage.value,
     genero:generoRadio.value,
     sobre:sobreTextArea.value
+
   }
   let lista=this.state.lista
   lista.unshift(nuevo)
@@ -61,6 +67,11 @@ guardar(e)
 
 })
 }
+else {
+  alert('Por Favor, acepte los terminos y condiciones')
+}
+
+}
 validar()
 {
   if (this.state.terminos != true)
@@ -75,6 +86,16 @@ validar()
 else {
   return true
 }
+}
+borrar(id)
+{
+console.log("me estoy metiendo a borrar ");
+console.log(id);
+
+var listaNueva = this.state.lista.filter((elemento)=>elemento.id !== id);
+      this.setState({
+        lista: listaNueva
+      })
 }
 
   render(){
@@ -126,19 +147,30 @@ aceptar terminos y condiciones
 <span> {this.state.guardar} </span>
 
 
-<ul>
+<table border="1" class="table">
+    <thead> </thead>
+    <tbody>
 {this.state.lista.map(user => {
-  return <Item key={user.id}
+  return <Item
+          key={user.id}
+          id={user.id}
           name={user.name}
           language={user.language}
           genero={user.genero}
-          sobre={user.sobre}   />
+          sobre={user.sobre}
+          borrarOp={this.borrar.bind(this)}   />
 })}
-</ul>
-  <p> {/*{JSON.stringify(this.state)} */}</p>
+
+</tbody>
+</table>
+
 
   </form>
+
   )
+
+
+
 }
 }
 export default Form

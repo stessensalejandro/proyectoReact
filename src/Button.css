@@ -4,11 +4,11 @@
   color: #fff;
   border-color: #586D7F;
   border-radius: 10px;
-  
+
 }
 
 .add-button:hover {
-  border-color: #63B8FF;
+  border-color: black;
 }
 
 .add-button:focus {

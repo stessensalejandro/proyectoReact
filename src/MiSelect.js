@@ -1,4 +1,5 @@
 import React from "react";
+import './MiSelect.css';
 
 class MiSelect extends React.Component
 {

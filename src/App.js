@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import './Item.css';
 import Hola from './Hola';
 import Button from './Button';
 import MiSelect from './MiSelect';
@@ -76,8 +75,9 @@ class App extends Component {
                        </div>
                      </div>
                    </div>
-
+                   <div class="selectMes">
                    <MiSelect />
+                   </div>
 
       </div>
     );
